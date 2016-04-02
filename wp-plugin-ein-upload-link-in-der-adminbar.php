@@ -1,3 +1,5 @@
+<?php 
+
 // Plugin Name: Ein Upload Link in der Adminbar
 
 function bau_ein_upload_link_in_der_adminbar() {
@@ -13,3 +15,5 @@ function bau_ein_upload_link_in_der_adminbar() {
 }
 
 add_action( 'wp_before_admin_bar_render', 'bau_ein_upload_link_in_der_adminbar' );
+
+?>
