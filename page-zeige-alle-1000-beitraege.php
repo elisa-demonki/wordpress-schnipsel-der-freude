@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Zeige alle Beitr&auml;ge
+Template Name: Zeige alle Beitrage
 */
 ?>
 
@@ -10,29 +10,41 @@ Template Name: Zeige alle Beitr&auml;ge
             
             body {
                 font-family:sans-serif;
+                margin:auto;
+                max-width: 500px;
             }
             
+            img {
+                max-width:500px;
+                height: auto;}
+            
             pre {
-                background: black;
-                color: white;
+                background: silver;
+                color: black;
                 padding: 1em;
             }   
             
             code {
-                background-color: black;
-                color: white;
+                background-color: silver;
+                color: black;
                 padding: 0 0.3em;
             }
+            
+            a {text-decoration: none;}
+            
             
         </style>
     </head>
     <body>
         
-<?php query_posts('posts_per_page=1000'); ?>
+<?php wp_reset_query();
+query_posts('posts_per_page=1000'); ?>
         
 <?php if (have_posts()) : ?><?php while (have_posts()) : the_post(); ?>
 
-<h1><?php the_title(); ?></h1>
+<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
+<?php edit_post_link('edit', '<p class"edit"><em><small>', '</small></em></p>'); ?>
+        
 <div><?php the_content(); ?></div>
 
 <?php endwhile; ?>
