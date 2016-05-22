@@ -28,7 +28,7 @@ Template Name: Zeige alle Beitr&auml;ge
     </head>
     <body>
         
-<?php query_posts('posts_per_page=0'); ?>
+<?php query_posts('posts_per_page=1000'); ?>
         
 <?php if (have_posts()) : ?><?php while (have_posts()) : the_post(); ?>
 
