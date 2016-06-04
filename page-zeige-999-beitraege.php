@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Zeige alle Beitrage
+Template Name: Zeige 999 Beitrage
 */
 ?>
 
@@ -38,7 +38,7 @@ Template Name: Zeige alle Beitrage
     <body>
         
 <?php wp_reset_query();
-query_posts('posts_per_page=1000'); ?>
+query_posts('posts_per_page=999'); ?>
         
 <?php if (have_posts()) : ?><?php while (have_posts()) : the_post(); ?>
 
