@@ -1,17 +1,12 @@
 <?php
 
-// Plugin Name: Vertsecke Fast Alles
+// Plugin Name: WP-Schnipsel der Freude - Vertsecke Fast Alles
 
 add_action('wp_before_admin_bar_render', 'wpse74389_check_username');
-function wpse74389_check_username()
-{
+function wpse74389_check_username() {
     $user = wp_get_current_user();
 
-    if($user && isset($user->user_login) && 'USERNAME' == $user->user_login)
-    {
-        // start
-
-
+    if($user && isset($user->user_login) && 'USERNAME' == $user->user_login) {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu('wp-logo');          // Remove the WordPress logo
  // $wp_admin_bar->remove_menu('about');            // Remove the about WordPress link
@@ -35,7 +30,7 @@ function wpse74389_check_username()
 	$wp_admin_bar->add_node( $args );
 
 
- // Website ansehen
+     // Website ansehen
 	$args = array(
 		'id'     => 'website-ansehen',
 		'title'  => 'Website ansehen',
@@ -44,16 +39,16 @@ function wpse74389_check_username()
 	);
 	 $wp_admin_bar->add_node( $args );
 
-      // Abmelden
+    // Abmelden
 	$args = array(
 		'id'     => 'abmelden',
 		'title'  => 'Abmelden',
 		'parent' => 'dev_menu',
                 'href' => get_site_url().'/wp-login.php?action=logout'
 	);
-	// $wp_admin_bar->add_node( $args );
+	$wp_admin_bar->add_node( $args );
 
-	// Beitrag
+        // Beitrag
 	$args = array(
 		'id'     => 'neuer_beitrag',
 		'title'  => 'Beiträge bearbeiten',
@@ -81,7 +76,7 @@ function wpse74389_check_username()
 	$wp_admin_bar->add_node( $args );
 
  
-// Menue bearbeiten
+        // Menue bearbeiten
 	$args = array(
 		'id'     => 'zum-menu',
 		'title'  => 'Navigation bearbeiten',
@@ -90,7 +85,7 @@ function wpse74389_check_username()
 	);
 	$wp_admin_bar->add_node( $args );
 
- // Farben anpassen
+        // Farben anpassen
 	$args = array(
 		'id'     => 'farbe-anpassen',
 		'title'  => 'Farbe und Schrift ver&auml;ndern',
@@ -108,34 +103,22 @@ function wpse74389_check_username()
 	);
 	$wp_admin_bar->add_node( $args );
 
-	
- 
-
-
 
 echo '<style type="text/css">#collapse-menu, #adminmenu, #adminmenuback, #wpfooter, #wp-admin-bar-customize, #welcome-panel, #dashboard-widgets-wrap, .update-nag { display: none; visibility: hidden; }</style>';
 
-
-
-
-// ende
     }
 }
 
 
-
-
-add_action('admin_init', 'delete_menues_user_check');
-function delete_menues_user_check()
-{
-    $user = wp_get_current_user();
-
-    if($user && isset($user->user_login) && 'USERNAME' == $user->user_login)
-    {
-        // start
-
+ // Wenn nicht ueber CSS ausgeschaltet werden soll:
 
 /*
+add_action('admin_init', 'delete_menues_user_check');
+ function delete_menues_user_check() {
+    $user = wp_get_current_user();
+
+    if($user && isset($user->user_login) && 'USERNAME' == $user->user_login) {
+    
   remove_menu_page( 'index.php' );                  //Dashboard
   remove_menu_page( 'jetpack' );                    //Jetpack* 
   remove_menu_page( 'edit.php' );                   //Posts
@@ -147,13 +130,8 @@ function delete_menues_user_check()
   remove_menu_page( 'users.php' );                  //Users
   remove_menu_page( 'tools.php' );                  //Tools
   remove_menu_page( 'options-general.php' );        //Settings
-        
-        */
 
-
-// ende
     }
-}
-
-
+ } 
+*/
 ?>
