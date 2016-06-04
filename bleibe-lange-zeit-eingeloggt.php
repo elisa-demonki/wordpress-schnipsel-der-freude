@@ -1,6 +1,6 @@
 <?php 
 // Plugin Name: Bleibe eingeloggt
-// Description: Wenn WP sich selbstständig ausloggt, gibt es manchmal Probleme mit dem Speichern, wenn man gerade an einem Beitrag oder an einer Seite schreibt.
+// Description: WP loggt dich jetzt nicht mehr automatisch nach 2 Wochen aus.
 // Links: 
 // https://developer.wordpress.org/reference/hooks/auth_cookie_expiration/
 
