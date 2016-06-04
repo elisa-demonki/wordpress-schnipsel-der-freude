@@ -5,5 +5,5 @@
 
 add_filter( 'auth_cookie_expiration', 'bleibe_viele_jahre_eingeloggt' );
 function bleibe_viele_jahre_eingeloggt( $expire ) {
-  return 3155692600; // 100 Jahre
+  return 3155692600; // 100 Jahre in Sekunden
 }
