@@ -1,6 +1,6 @@
 <?php
 
-// Plugin Name: Shortcode, der die Beitrage anzeigt
+// Plugin Name: Shortcode, der alle Beitragstitel anzeigt
 // Description: Shortcode: [archives]
 // ---------------------------
 // Links: 
