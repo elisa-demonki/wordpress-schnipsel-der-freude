@@ -1,6 +1,6 @@
 <?php
 // Plugin Name: Shortcode, der alle Beitragstitel alphapetisch geordnet anzeigt
-// Description: Shortcode: [archives]
+// Description: Shortcode: [archive-alpha]
 // ---------------------------
 // Links: 
 // http://wordpress.stackexchange.com/questions/61674/how-to-make-archive-shortcode
