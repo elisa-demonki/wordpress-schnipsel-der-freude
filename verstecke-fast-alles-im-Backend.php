@@ -1,6 +1,6 @@
 <?php
 
-// Plugin Name: WP-Schnipsel der Freude - Vertsecke Fast Alles
+// Plugin Name: WP-Schnipsel der Freude - Vertsecke Fast Alles im Backend
 
 add_action('wp_before_admin_bar_render', 'wpse74389_check_username');
 function wpse74389_check_username() {
